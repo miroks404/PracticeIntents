@@ -18,19 +18,22 @@ class SecondActivity : AppCompatActivity() {
         var timeFormat: String
 
         binding.tvDateOrTime.text = intent?.action?.let {
-                when(it) {
-                    "com.example.practiceintents.SHOW_TIME" -> {
-                        timeFormat = "HH:mm:ss"
-                        "Time: ${SimpleDateFormat(timeFormat).format(Date(System.currentTimeMillis()))}"
-                    }
-                    "com.example.practiceintents.SHOW_DATE" -> {
-                        timeFormat = "dd.MM.yyyy"
-                        "Date: ${SimpleDateFormat(timeFormat).format(Date(System.currentTimeMillis()))}"
-                    }
-                    else -> "Error"
+            when (it) {
+                "com.example.practiceintents.SHOW_TIME" -> {
+                    timeFormat = "HH:mm:ss"
+                    "Time: ${SimpleDateFormat(timeFormat).format(Date(System.currentTimeMillis()))}"
                 }
-            }
 
+                "com.example.practiceintents.SHOW_DATE" -> {
+                    timeFormat = "dd.MM.yyyy"
+                    "Date: ${SimpleDateFormat(timeFormat).format(Date(System.currentTimeMillis()))}"
+                }
+
+                else -> "Error"
+            }
+        }
+
+        binding.tvName.text = intent.getStringExtra("NAME_KEY")
 
     }
 }

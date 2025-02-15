@@ -2,4 +2,8 @@
     <string name="app_name">PracticeIntents</string>
     <string name="show_date_text_button">Show date</string>
     <string name="show_time_text_button">Show time</string>
+    <string name="your_name_text">Your name is</string>
+    <string name="your_name_hint_text">youre name</string>
+    <string name="enter_name_button_text">enter name</string>
+    <string name="ok_text_button">ok</string>
 </resources>
